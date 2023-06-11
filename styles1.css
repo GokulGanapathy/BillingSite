@@ -1,0 +1,282 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Meal Type Buttons */
+.meal-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.meal-type button {
+  flex-basis: 23%;
+}
+
+.meal-type button.active {
+  background-color: #0b7dda;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label-container label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select-container:after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  margin-left: 14px;
+}
+
+/* Bill Items */
+.bill-items {
+  margin-bottom: 30px;
+}
+
+.bill-items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bill-items li {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bill-items li span {
+  flex-basis: 25%;
+  font-size: 18px;
+  color: #333;
+}
+
+.bill-items li .item-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.bill-items li .item-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-items li .item-price {
+  font-size: 18px;
+  color: #555;
+}
+
+.bill-items li .remove-btn {
+  background-color: #f44336;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bill-items li .remove-btn:hover {
+  background-color: #da1e0e;
+}
+
+/* Total Amount */
+.total-amount {
+  text-align: right;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.clear-btn {
+  background-color: #f44336;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #da1e0e;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.save-btn:hover {
+  background-color: #329932;
+}
+
+.print-btn {
+  background-color: #555;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.print-btn:hover {
+  background-color: #333;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .meal-type button {
+    flex-basis: 48%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input {
+    margin-top: 10px;
+  }
+
+  .buttons {
+    text-align: left;
+  }
+}

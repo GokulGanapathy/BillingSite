@@ -1,0 +1,748 @@
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.left {
+  margin-right: center;
+}
+
+.right {
+  margin-left: right;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Meal Type Buttons */
+.meal-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.meal-type button {
+  flex-basis: 23%;
+}
+
+.meal-type button.active {
+  background-color: #0b7dda;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label-container label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select-container:after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  margin-left: 14px;
+}
+
+/* Bill Items */
+.bill-items {
+  margin-bottom: 30px;
+}
+
+.bill-items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bill-items li {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bill-items li span {
+  flex-basis: 25%;
+  font-size: 18px;
+  color: #333;
+}
+
+.bill-items li .item-details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.bill-items li .item-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-items li .item-price {
+  font-size: 18px;
+  color: #555;
+}
+
+.bill-items li .remove-btn {
+  background-color: #f44336;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bill-items li .remove-btn:hover {
+  background-color: #da1e0e;
+}
+
+/* Total Amount */
+.total-amount {
+  text-align: right;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.buttons {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.clear-btn {
+  background-color: #f44336;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #da1e0e;
+}
+
+.save-btn {
+  background-color: #4CAF50;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.save-btn:hover {
+  background-color: #329932;
+}
+
+.print-btn {
+  background-color: #555;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.print-btn:hover {
+  background-color: #333;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  .meal-type button {
+    flex-basis: 48%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input {
+    margin-top: 10px;
+  }
+
+  .buttons {
+    text-align: left;
+  }
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Meal Type Buttons */
+.meal-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.meal-type button {
+  flex-basis: 23%;
+}
+
+.meal-type button.active {
+  background-color: #0b7dda;
+}
+.meal-type button.breakfast {
+  background-color: #ffd700; /* Golden Yellow */
+}
+
+.meal-type button.lunch {
+  background-color: #00bfff; /* Deep Sky Blue */
+}
+
+.meal-type button.dinner {
+  background-color: #ff6347; /* Tomato Red */
+}
+
+.meal-type button.snack {
+  background-color: #90ee90; /* Light Green */
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label-container label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select-container:after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  margin-left: 14px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+footer{
+  text-align: center;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-btn {
+  padding: 8px 16px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bill-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.bill-container h2 {
+  margin-top: 0;
+}
+
+.billItemsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.billItemsList li {
+  margin-bottom: 5px;
+}
+
+.total-amount {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.total-amount label {
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.save-btn {
+  padding: 8px 16px;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.clear-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 0;
+}
+
+p {
+  font-size: 16px;
+  color: #777;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0b7dda;
+}
+
+/* Meal Type Buttons */
+.meal-type {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.meal-type button {
+  flex-basis: 23%;
+}
+
+.meal-type button.active {
+  background-color: #0b7dda;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select-container:after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #777;
+  pointer-events: none;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  margin-left: 10px;
+}
+
+/* Bill Items */
+.bill-items {
+  margin-bottom: 20px;
+}
+
+.bill-items ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bill-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bill-items li span {
+  flex-basis: 25%;
+}
+
+.bill-items li .remove-btn {
+  background-color: #f44336;
+}
+
+.bill-items li .remove-btn:hover {
+  background-color: #da1e0e;
+}
+
+/* Total Amount */
+.total-amount {
+  text-align: right;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+  text-align: right;
+}
+
+.clear-btn {
+  background-color: #f44336;
+}
+
+.clear-btn:hover {
+  background-color: #da1e0e;
+}
+
+.print-btn {
+  background-color: #4CAF50;
+}
+
+.print-btn:hover {
+  background-color: #329932;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .meal-type button {
+    flex-basis: 48%;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .input-group input {
+    margin-top: 10px;
+  }
+  
+  .buttons {
+    text-align: left;
+  }
+}
+
